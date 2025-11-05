@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Celo Banking</title>
+    <!-- google font Open San -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-icon-180x180.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./assets/favicon/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="./assets/favicon/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- CSS  -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-fixed">
+          <!-- Logo -->
+          <a href="#home" class="logo header-logo">
+            <img src="./assets/logo/Logo.png" alt="" class="header__logo--img" />
+          </a>
+
+          <!-- navbar -->
+          <navbar class="header__navbar">
+            <ul class="navbar__list">
+              <li class="navbar__item">
+                <a href="#home" class="header__nav-link active">Home</a>
+              </li>
+
+              <li class="navbar__item">
+                <a href="#product" class="header__nav-link">Product</a>
+              </li>
+              <li class="navbar__item">
+                <a href="#features" class="header__nav-link">Features</a>
+              </li>
+              <li class="navbar__item">
+                <a href="#blog" class="header__nav-link">Blog</a>
+              </li>
+            </ul>
+          </navbar>
+
+          <!-- Header Action -->
+          <div class="header__action">
+            <a href="#!" class="btn header__action--link">Log in</a>
+            <a href="#!" class="btn header__action--link active">Sign up</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main style="height: 1000px">
+      <section class="hero" id="home">
+        <div class="container">
+          <div class="hero__inner">
+            <!-- Hero Content -->
+            <div class="hero__content">
+              <p class="hero__title section-title">Digital Smart Wallet</p>
+              <h1 class="section-heading hero-heading">
+                Digital
+                <strong class="hero-heading__strong">Payment</strong>
+                For Everyone.
+              </h1>
+              <p class="section-desc hero-desc">
+                We bring together eveything that’s required to build websites and apps that accept
+                payments and send payouts globally. We are the best platform.
+              </p>
+              <form action="" class="subscribe-form">
+                <input
+                  type="email"
+                  class="subscribe-form__input"
+                  name=""
+                  id=""
+                  placeholder="Enter your email"
+                />
+                <button type="submit" class="btn subscribe-form__submit">Get Started</button>
+              </form>
+
+              <p class="section-note hero-note">
+                *We’ll respect the inbox and never share your email.
+              </p>
+            </div>
+
+            <!-- Hero Media -->
+            <div class="hero__media">
+              <div class="hero__media--phone">
+                <!-- phone -->
+                <img src="./assets/img/hero_mobile.png" alt="" class="hero__media--img" />
+
+                <!-- Card Deposit -->
+                <div class="hero__media-deposit">
+                  <img src="./assets/icon/hero_deposit.png" alt="" />
+                  <span class="hero__deposit-text">Deposit</span>
+                  <span class="hero__deposit-number">$32000</span>
+                </div>
+
+                <!-- Card secured -->
+                <div class="hero__media-secured">
+                  <img src="./assets/icon/hero-secure.png" alt="" />
+                  <div class="hero__secured-content">
+                    <span class="hero__secured-number">$1650</span>
+                    <span class="hero__secured-text">SECURED FUNDS</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- hero interest -->
+              <div class="hero__media--interest">
+                <span class="hero__interest-number">0%</span>
+                <span class="hero__interest-text">Interest</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
