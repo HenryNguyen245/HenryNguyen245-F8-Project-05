@@ -8,8 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
     <!-- favicon -->
@@ -38,6 +40,8 @@
     <!-- CSS  -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <!-- Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   </head>
   <body>
     <header class="header">
@@ -56,7 +60,7 @@
               </li>
 
               <li class="navbar__item">
-                <a href="#product" class="header__nav-link">Product</a>
+                <a href="#products" class="header__nav-link">Products</a>
               </li>
               <li class="navbar__item">
                 <a href="#features" class="header__nav-link">Features</a>
@@ -75,23 +79,46 @@
         </div>
       </div>
     </header>
-    <main style="height: 1000px">
+    <main>
       <section class="hero" id="home">
         <div class="container">
           <div class="hero__inner">
             <!-- Hero Content -->
             <div class="hero__content">
-              <p class="hero__title section-title">Digital Smart Wallet</p>
-              <h1 class="section-heading hero-heading">
+              <p
+                class="hero__title section-title"
+                data-aos="fade-up"
+                data-aos-delay="0"
+                data-aos-anchor-placement="top-bottom"
+              >
+                Digital Smart Wallet
+              </p>
+              <h1
+                class="section-heading hero-heading"
+                data-aos="fade-up"
+                data-aos-delay="150"
+                data-aos-anchor-placement="top-bottom"
+              >
                 Digital
                 <strong class="hero-heading__strong">Payment</strong>
                 For Everyone.
               </h1>
-              <p class="section-desc hero-desc">
+              <p
+                class="section-desc hero-desc"
+                data-aos="fade-up"
+                data-aos-delay="300"
+                data-aos-anchor-placement="top-bottom"
+              >
                 We bring together eveything that’s required to build websites and apps that accept
                 payments and send payouts globally. We are the best platform.
               </p>
-              <form action="" class="subscribe-form">
+              <form
+                action=""
+                class="subscribe-form"
+                data-aos="fade-up"
+                data-aos-delay="450"
+                data-aos-anchor-placement="top-bottom"
+              >
                 <input
                   type="email"
                   class="subscribe-form__input"
@@ -111,17 +138,35 @@
             <div class="hero__media">
               <div class="hero__media--phone">
                 <!-- phone -->
-                <img src="./assets/img/hero_mobile.png" alt="" class="hero__media--img" />
+                <img
+                  src="./assets/img/hero_mobile.png"
+                  alt=""
+                  class="hero__media--img"
+                  data-aos="zoom-out-up"
+                  data-aos-delay="800"
+                  data-aos-duration="1200"
+                  data-aos-anchor-placement="top-bottom"
+                />
 
                 <!-- Card Deposit -->
-                <div class="hero__media-deposit">
+                <div
+                  class="hero__media-deposit"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                  data-aos-anchor-placement="top-bottom"
+                >
                   <img src="./assets/icon/hero_deposit.png" alt="" />
                   <span class="hero__deposit-text">Deposit</span>
                   <span class="hero__deposit-number">$32000</span>
                 </div>
 
                 <!-- Card secured -->
-                <div class="hero__media-secured">
+                <div
+                  class="hero__media-secured"
+                  data-aos="fade-up"
+                  data-aos-delay="550"
+                  data-aos-anchor-placement="top-bottom"
+                >
                   <img src="./assets/icon/hero-secure.png" alt="" />
                   <div class="hero__secured-content">
                     <span class="hero__secured-number">$1650</span>
@@ -131,7 +176,7 @@
               </div>
 
               <!-- hero interest -->
-              <div class="hero__media--interest">
+              <div class="hero__media--interest" data-aos="fade-up" data-aos-delay="700">
                 <span class="hero__interest-number">0%</span>
                 <span class="hero__interest-text">Interest</span>
               </div>
@@ -139,7 +184,54 @@
           </div>
         </div>
       </section>
+
+      <section class="products" id="products">
+        <div class="container">
+          <div class="product__inner">
+            <!-- product media -->
+            <div
+              class="product__media"
+              data-aos="zoom-in-up"
+              data-aos-anchor-placement="top-bottom"
+            >
+              <img
+                src="./assets/img/work_01.png"
+                alt=""
+                class="product__media--img"
+                data-aos="fade-down"
+              />
+              <img
+                src="./assets/icon/logo_icon.svg"
+                alt=""
+                class="product__media--icon"
+                data-aos="fade-right"
+              />
+              <div class="product__media--card" data-aos="fade-up">
+                <img src="./assets/icon/work_icon.svg" alt="" />
+                <div class="product__media--card-content">
+                  <span>Congratulations</span>
+                  <span>Your account activated</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- product content -->
+            <div class="product-content"></div>
+          </div>
+        </div>
+      </section>
     </main>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: false, // chạy lại khi scroll
+        mirror: true, // cuộn lên chạy lại
+        offset: 80, // (optional) tăng độ trễ kích hoạt
+        anchorPlacement: "top-bottom",
+      });
+    </script>
   </body>
+
   <script src="script.js"></script>
 </html>
