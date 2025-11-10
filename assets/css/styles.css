@@ -63,7 +63,7 @@ button {
 
 .section-title {
   position: relative;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   color: #696d77;
   font-size: 1.6rem;
@@ -563,6 +563,7 @@ button {
 
 /* feature media */
 .feature__media {
+  position: relative;
   width: 48.7%;
 }
 
@@ -572,6 +573,9 @@ button {
 }
 
 .feature__send-money {
+  position: absolute;
+  top: -48px;
+  right: 0;
   display: inline-flex;
   align-items: center;
   padding: 23px 13px;
@@ -606,4 +610,144 @@ button {
 
 .feature__send-money div:nth-child(2) {
   margin-right: 67px;
+}
+
+.feature__income {
+  position: absolute;
+  right: 0;
+  bottom: -55px;
+  padding: 15px;
+  padding-right: 52px;
+
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+  background: #439f90;
+}
+
+.feature__income--icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.feature__income span:nth-of-type(1) {
+  margin-top: 14px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.feature__income span:nth-of-type(2) {
+  margin-top: 6px;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.feature__media--wrap {
+  position: relative;
+  width: 82.45%;
+}
+
+.feature__media--wrap::before {
+  position: absolute;
+  bottom: 0;
+  content: url(../img/feature_background.png);
+  display: block;
+}
+
+.feature__media--img-below {
+  width: 87.87%;
+  object-fit: cover;
+  /* display: block; */
+  margin: 0 auto;
+}
+
+.feature__payment-method {
+  /* color: #fff; */
+  position: absolute;
+  right: 26px;
+  bottom: 56px;
+  padding: 28px;
+  background-color: #fff;
+  box-shadow: 0 44px 48px rgba(0, 0, 0, 0.1);
+}
+
+.payment__cash {
+  position: absolute;
+  right: 0;
+  bottom: 222px;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #7264d6;
+  box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.feature__payment-title {
+  display: inline-block;
+  color: #212832;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67; /* 166.667% */
+}
+
+.payment__list {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  justify-content: space-between;
+}
+
+.payment__item-link {
+  display: inline-flex;
+  width: 63px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background: #f2f2fa;
+}
+
+.feedback {
+  padding: 80px 0;
+}
+
+.feedback__header {
+  text-align: center;
+}
+
+.feedback-desc {
+  margin: 18px auto 0;
+  width: 37.18%;
+  line-height: 1.75; /* 175% */
+}
+
+.feedback__content {
+  overflow: hidden; /* ẩn phần tràn */
+  width: 100%;
+  margin: 70px auto 0;
+}
+
+.feedback__list {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.6s ease;
+}
+
+.feedback__item {
+  flex: 0 0 calc(50% - 15px);
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }

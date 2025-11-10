@@ -25,3 +25,24 @@ const observer = new IntersectionObserver(
 );
 
 sections.forEach((section) => observer.observe(section));
+
+function showNextFeedback() {
+  // Xoá active cũ
+  items.forEach((item) => item.classList.remove("active"));
+
+  // Tính index mới
+  currentIndex = (currentIndex + 1) % items.length;
+
+  // Thêm active mới
+  items[currentIndex].classList.add("active");
+
+  // Trượt ngang
+  const offset = -currentIndex * 100;
+  feedbackList.style.transform = `translateX(${offset}%)`;
+}
+
+// Đặt active ban đầu
+items[currentIndex].classList.add("active");
+
+// Tự động chuyển mỗi 5s
+setInterval(showNextFeedback, 5000);
