@@ -732,7 +732,7 @@ button {
 }
 
 .feedback__content {
-  overflow: hidden; /* ẩn phần tràn */
+  overflow: hidden; /*ẩn phần tràn */
   width: 100%;
   margin: 70px auto 0;
 }
@@ -746,8 +746,116 @@ button {
 .feedback__item {
   flex: 0 0 calc(50% - 15px);
   background: #fff;
-  border-radius: 8px;
-  padding: 24px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 22px 54px rgba(0, 0, 0, 0.07); */
   transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.feedback__item.active {
+  opacity: 1;
+}
+
+.feedback__item-desc {
+  position: relative;
+  color: #696d76;
+  padding: 42px 28px;
+  border: 1px solid #dfe2e8;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 2.2rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.55; /* 154.545% */
+  background: inherit;
+}
+
+.feedback__item-desc:hover {
+  cursor: pointer;
+}
+
+.feedback__item-desc.active {
+  border-color: #fff;
+  box-shadow: 0 22px 54px rgba(0, 0, 0, 0.07);
+  opacity: 1;
+}
+
+.feedback__item-desc.active::before {
+  border-color: #fff;
+}
+.feedback__item-desc::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -30px; /* độ dài phần mũi nhọn nhô ra */
+  transform: translateX(-50%) rotate(45deg);
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-right: 1px solid #dfe2e8;
+  border-bottom: 1px solid #dfe2e8;
+}
+
+.feedback__item--people {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.feedback__people-avatar {
+  margin-top: 66px;
+}
+
+.feedback__people-img {
+  width: 104px;
+  height: 104px;
+  object-fit: cover;
+  border-radius: 50%;
+  background-color: #4ab5e3;
+}
+
+.feedback__people-name {
+  margin-top: 20px;
+  color: #070052;
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 600;
+  line-height: 1.38; /* 138.462% */
+}
+
+.feedback__people-career {
+  margin-top: 2px;
+  color: #696d76;
+  font-size: 1.8rem;
+
+  font-weight: 400;
+  line-height: 1.67; /* 166.667% */
+}
+
+.feedback__list .feedback__item:nth-of-type(2) .feedback__people-img {
+  background-color: #439f90;
+}
+
+.feedback__list .feedback__item:nth-of-type(3) .feedback__people-img {
+  background-color: #da6464;
+}
+
+.feedback__list .feedback__item:nth-of-type(4) .feedback__people-img {
+  background-color: #feef65;
+}
+
+.feedback__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 38px;
+}
+
+.feedback__footer__item {
+  width: 22px;
+  height: 6px;
+  border-radius: 2px;
+  border: 1px solid #9b9fab;
+}
+
+.feedback__footer__item.active {
+  background: #7264d6;
 }
